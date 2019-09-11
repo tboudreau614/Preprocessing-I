@@ -29,6 +29,21 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+@backgroundBlue: powderblue;
+@backgroundPink: pink;
+
+.cardsize {
+	height: 625px;
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 5%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
 body {
 	line-height: 1;
 }
@@ -54,6 +69,162 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;	
 }
 
+h1 {
+	font-size: 3rem;
+}
+
+header {
+
+	nav {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-top: 2%;
+		
+	} //This closes the nav tag
+		a {
+			text-decoration: none;
+			font-size: 2rem;
+			padding-left: 50px;
+			color: black;
+			margin-right: 5%;
+			
+			
+		} //This closes the a tag
+			a:hover{
+				color: white;
+				background-color: @backgroundPink;
+				transition: 1.25s;
+			}//this closes the hover tag
+
+} //This closes the header tag
+
+.pic, .pic2{
+	@media(max-width: 500px){
+		display:none;
+	}
+}
+
+.top-cont {
+	//height: 625px;
+	//width: 50%;
+	background-color: @backgroundBlue;
+	//margin-top: 2%;
+	//margin-left: 5%;
+	.cardsize();
+	@media(max-width: 500px){
+		height:150px;
+
+	}
+		p {
+
+			@media(max-width: 500px){
+				font-size: 10px;
+			}
+
+			font-size: 1.8rem;
+			width: 33%;
+			margin-left: 30%;
+			text-align: center;
+			padding-top: 5%;
+		}
+		h1 {
+
+			@media(max-width: 500px){
+				font-size: 1rem;
+			}
+
+			margin-left: 11%;
+			padding-top: 5%;
+		}//this closes the h1 tag
+			.pic, .pic2 {
+				margin-top: 15%;
+				margin-left: 10%;
+			}//this closes the pic and pic2 tags	
+				button {
+					background-color: #DCDCDC;
+					margin-top: 20px;
+					margin-left: 45%;
+				}	
+}//This closes the top-cont section tag
+
+.skills {
+	background-color: @backgroundPink;
+	.cardsize ();
+	//width: 15%;
+	//margin-left: 5%;
+	height: 150px;
+
+	h1{
+		margin-top: 20px;
+		@media(max-width: 500px){
+			font-size: 1rem;
+			margin-left: 45%;
+		}
+		
+	}//closes h1
+		li {
+
+			@media(max-width: 500px){
+				font-size: 10px;
+
+			font-size: 1.5rem;
+			margin-top: 20px;
+			margin-left: 15%;
+			list-style-type: circle;
+			
+			
+		}//closes li
+}//closes skills
+
+.work-hist {
+	display: flex;
+	flex-direction: column;
+	margin-right: 25%;
+	background-color: @backgroundBlue;
+	margin-left: 25%;
+	height: 585px;
+	margin-top: 5%;
+
+		h1 {
+			padding-left: 35%;
+			padding-top: 5%;
+			@media(max-width: 500px){
+				font-size: 1rem;
+		}//closes h1
+			p {
+				font-size: 1.8rem;
+				padding-left: 5%;
+				padding-right: 5%;
+				padding-top: 5%;
+				line-height: 2;
+			}
+}//closes work hist class
+
+.contact {
+	display: flex;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 5%;
+	flex-direction: column;
+	width: 50%;
+	height: 225px;
+	background-color: @backgroundPink;
+
+		h1 {
+			margin-top: 20px;
+			padding-left: 40%;
+		}//closes h1
+
+		p {
+			font-size: 1.8rem;
+			padding-left: 5%;
+			padding-right: 5%;
+			padding-top: 5%;
+			padding-bottom: 10%;
+			line-height: 2;
+		}
+}//closes section
